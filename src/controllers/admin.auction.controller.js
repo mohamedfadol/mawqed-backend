@@ -327,15 +327,17 @@ async function updateAuctionStatus(req, res) {
         auction: formatAuction(updatedAuction),
       },
     });
+    
   } catch (error) {
     console.error('Update auction status error:', error);
-
     return res.status(500).json({
       success: false,
       message: 'Server error',
     });
   }
 }
+
+
 
 module.exports = {
   approveListing,
